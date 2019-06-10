@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ThreadTest",
+            "request": "launch",
+            "mainClass": "ThreadTest",
+            "projectName": "prog_8cb3e907"
+        }
+    ]
+}
