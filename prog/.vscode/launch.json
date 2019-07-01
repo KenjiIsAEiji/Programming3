@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - ExerciseList",
+            "request": "launch",
+            "mainClass": "ExerciseList",
+            "projectName": "prog_8cb3e907"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - ThreadTest",
             "request": "launch",
             "mainClass": "ThreadTest",
