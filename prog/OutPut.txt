@@ -1,0 +1,32 @@
+0001:  import java.io.*;
+0002:  
+0003:+ public class Report4{
+0004:+     public static void main(String[] args) {
+0005:+         try{
+0006:              FileReader fr = new FileReader("C:/MyGitHub/Programming3/prog/Report4.java");
+0007:              BufferedReader br = new BufferedReader(fr);
+0008:  
+0009:              FileWriter fw = new FileWriter("C:/MyGitHub/Programming3/prog/OutPut.txt");
+0010:              BufferedWriter bw = new BufferedWriter(fw);
+0011:  
+0012:              int lineCount = 1;
+0013:              String s;
+0014:+             while((s = br.readLine()) != null){
+0015:                  if(s.contains("{") && s.contains("}") && !s.contains("\"{\"") && !s.contains("\"}\"")){
+0016:                      bw.write(String.format("%04d:", lineCount) + "* " + s + "\n");
+0017:-                 }else if(s.contains("{") && !s.contains("\"{\"")){
+0018:                      bw.write(String.format("%04d:", lineCount) + "+ " + s + "\n");
+0019:+                 }else if(s.contains("}") && !s.contains("\"}\"")){
+0020:                      bw.write(String.format("%04d:", lineCount) + "- " + s + "\n");
+0021:*                 }else{
+0022:                      bw.write(String.format("%04d:", lineCount) + "  " + s + "\n");
+0023:-                 }
+0024:  
+0025:                  lineCount++;
+0026:-             }
+0027:  
+0028:              br.close();
+0029:              bw.close();
+0030:*         }catch(IOException exception){System.out.println(exception);}
+0031:-     }
+0032:- }
