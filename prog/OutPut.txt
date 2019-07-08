@@ -12,11 +12,11 @@
 0012:              int lineCount = 1;
 0013:              String s;
 0014:+             while((s = br.readLine()) != null){
-0015:                  if(s.contains("{") && s.contains("}") && !s.contains("\"{\"") && !s.contains("\"}\"")){
+0015:*                 if(s.contains("{") && s.contains("}")){
 0016:                      bw.write(String.format("%04d:", lineCount) + "* " + s + "\n");
-0017:-                 }else if(s.contains("{") && !s.contains("\"{\"")){
+0017:*                 }else if(s.contains("{")){
 0018:                      bw.write(String.format("%04d:", lineCount) + "+ " + s + "\n");
-0019:+                 }else if(s.contains("}") && !s.contains("\"}\"")){
+0019:*                 }else if(s.contains("}")){
 0020:                      bw.write(String.format("%04d:", lineCount) + "- " + s + "\n");
 0021:*                 }else{
 0022:                      bw.write(String.format("%04d:", lineCount) + "  " + s + "\n");

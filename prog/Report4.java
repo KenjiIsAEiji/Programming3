@@ -12,11 +12,11 @@ public class Report4{
             int lineCount = 1;
             String s;
             while((s = br.readLine()) != null){
-                if(s.contains("{") && s.contains("}") && !s.contains("\"{\"") && !s.contains("\"}\"")){
+                if(s.contains("{") && s.contains("}")){
                     bw.write(String.format("%04d:", lineCount) + "* " + s + "\n");
-                }else if(s.contains("{") && !s.contains("\"{\"")){
+                }else if(s.contains("{")){
                     bw.write(String.format("%04d:", lineCount) + "+ " + s + "\n");
-                }else if(s.contains("}") && !s.contains("\"}\"")){
+                }else if(s.contains("}")){
                     bw.write(String.format("%04d:", lineCount) + "- " + s + "\n");
                 }else{
                     bw.write(String.format("%04d:", lineCount) + "  " + s + "\n");

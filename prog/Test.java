@@ -1,7 +1,8 @@
 public class Test{
     public static void main(String[] args) {
         try{
-            System.out.println(args[0]);
+
+            System.out.println();
         }catch(ArrayIndexOutOfBoundsException e){
             System.out.println("errorCode : " + e);
         }finally{
